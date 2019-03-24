@@ -1,0 +1,14 @@
+<div class="content">
+  <div class="head">- ПРИМЕРЫ НАШИХ РАБОТ -</div>
+  <div class="slider">
+    <div class="slider__wrapper">
+      <div class="slider__slide" #move>
+        <div class="image_slide" *ngFor="let image of data">
+          <img src="{{image.name}}" alt="img-nature">
+        </div>
+      </div>
+    </div>
+    <button class="slider__btn slider__btn--left" (click)="sliderLeft()">Left</button>
+    <button class="slider__btn slider__btn--right" (click)="sliderRight()">Right</button>
+  </div>
+</div>

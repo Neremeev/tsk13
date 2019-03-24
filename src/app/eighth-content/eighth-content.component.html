@@ -1,0 +1,42 @@
+<div class="content">
+
+  <div class="header">- ОСТАЛИСЬ ВОПРОСЫ? -</div>
+
+  <div class="cont">
+    <div class="consult">
+      <span class="text1">Позвоните нам:</span>
+      <span class="text2">+7 (987) 998-80-13</span>
+      <span class="text3">или закажите бесплатный звонок:</span>
+      <button class="btn btn-warning button text4">
+        <div class="phone"></div>
+        <span class="text-span" (click)="openPopup()">БЕСПЛАТНЫЙ ЗВОНОК</span>
+      </button>
+      <span class="text5">Мы работаем по Саранску и Республике Мордовия – без выходных!</span>
+    </div>
+    <div class="form"></div>
+
+    <form [formGroup]="messageForm" class="form" (ngSubmit)="onSubmit()">
+      <h4>Напишите нам:</h4>
+      <h5 *ngIf="success" class="success">Письмо успешно отправлено!</h5>
+      <input
+        [ngClass]="{'inputError': messageForm.get('userName').invalid && errorMessage}"
+        formControlName="userName"
+        placeholder="ВАШЕ ИМЯ">
+      <input
+        [ngClass]="{'inputError': messageForm.get('userEmail').invalid && errorMessage}"
+        formControlName="userEmail"
+        placeholder="ВАША ЭЛЕКТРОННАЯ ПОЧТА">
+      <textarea
+        [ngClass]="{'inputError': messageForm.get('userQuestion').invalid && errorMessage}"
+        formControlName="userQuestion"
+        placeholder="ВАШ ВОПРОС"></textarea>
+      <button class="btn btn-warning button text6">ОТПРАВИТЬ СООБЩЕНИЕ</button>
+    </form>
+
+  </div>
+
+  <div *ngIf="openModal">
+    <app-modal [buttonText]="'БЕСПЛАТНЫЙ ЗВОНОК'" [typeId]="2"></app-modal>
+  </div>
+
+</div>

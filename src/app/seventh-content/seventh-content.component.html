@@ -1,0 +1,25 @@
+<div class="content">
+
+  <div class="zigzag-top"></div>
+
+    <div class="cont">
+      <div class="head">- ОТЗЫВЫ НАШИХ КЛИЕНТОВ -</div>
+
+      <div class="items">
+        <div class="item" *ngFor="let review of reviews">
+          <div class="review">
+            <div class="speach"><span class="text">{{review.review}}</span></div>
+            <div class="speach-angle"></div>
+          </div>
+          <div class="people">
+            <img src="../../assets/icon-message.png"  alt="установка">
+            <div class="name">{{review.name}}</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  <div class="zigzag-bottom"></div>
+
+</div>

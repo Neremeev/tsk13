@@ -1,0 +1,15 @@
+<div class="content">
+  <div class="head">- НАШИ УСЛУГИ -</div>
+  <div class="text">Стоимость услуг указана без учёта стоимости запчастей и оборудования</div>
+  <div class="cards">
+    <div class="card" *ngFor="let item of data">
+      <img src="{{item.image}}"  alt="установка">
+      <span class="name">{{item.name}}</span>
+      <span class="price">{{item.price}}</span>
+      <button class="btn btn-primary" (click)="openPopup(item)">Заказать</button>
+    </div>
+  </div>
+  <div *ngIf="openModal">
+    <app-modal [buttonText]="'ОТПРАВИТЬ ЗАЯВКУ'" [typeId]="1" [serviceId]="currentServiceId"></app-modal>
+  </div>
+</div>

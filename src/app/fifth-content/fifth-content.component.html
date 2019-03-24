@@ -1,0 +1,29 @@
+<div class="content">
+
+  <div class="zigzag-top"></div>
+
+  <div class="cont">
+    <div class="head">- КАК МЫ РАБОТАЕМ -</div>
+
+    <div class="items">
+      <div class="item" *ngFor="let item of data">
+        <img src="{{item.image}}"  alt="установка">
+        <div class="text">
+          <h4>{{item.head}}</h4>
+          <span>{{item.text}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="line"></div>
+    <div class="head2">Оставьте заявку прямо сейчас!</div>
+    <button class="btn btn-warning button" (click)="openPopup()">ОСТАВИТЬ ЗАЯВКУ</button>
+  </div>
+
+  <div *ngIf="openModal">
+    <app-modal [buttonText]="'ОСТАВИТЬ ЗАЯВКУ'" [typeId]="1"></app-modal>
+  </div>
+
+  <div class="zigzag-bottom"></div>
+
+</div>

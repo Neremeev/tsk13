@@ -1,0 +1,22 @@
+.content {
+
+  background-color: rgb(25, 25, 25);
+  height: 100px;
+  min-width: 1200px;
+
+  .zigzag-top {
+    background: linear-gradient(135deg, white 25%, rgba(255, 255, 255, 0) 25%), linear-gradient(225deg, white 25%, rgba(255, 255, 255, 0) 25%);
+    background-size: 32px 200%;
+    height: 16px;
+  }
+
+  .cont {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: #FFFFFF;
+  }
+
+}
