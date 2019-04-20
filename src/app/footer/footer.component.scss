@@ -16,7 +16,17 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+    text-align: center;
     color: #FFFFFF;
   }
 
+}
+
+@media only screen and (max-width: 1200px)  {
+  .content {
+    margin-top: 30px;
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+  }
 }

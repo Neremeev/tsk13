@@ -18,18 +18,24 @@
     <form [formGroup]="messageForm" class="form" (ngSubmit)="onSubmit()">
       <h4>Напишите нам:</h4>
       <h5 *ngIf="success" class="success">Письмо успешно отправлено!</h5>
-      <input
-        [ngClass]="{'inputError': messageForm.get('userName').invalid && errorMessage}"
-        formControlName="userName"
-        placeholder="ВАШЕ ИМЯ">
-      <input
-        [ngClass]="{'inputError': messageForm.get('userEmail').invalid && errorMessage}"
-        formControlName="userEmail"
-        placeholder="ВАША ЭЛЕКТРОННАЯ ПОЧТА">
-      <textarea
-        [ngClass]="{'inputError': messageForm.get('userQuestion').invalid && errorMessage}"
-        formControlName="userQuestion"
-        placeholder="ВАШ ВОПРОС"></textarea>
+      <label>
+        <input
+            [ngClass]="{'inputError': messageForm.get('userName').invalid && errorMessage}"
+            formControlName="userName"
+            placeholder="ВАШЕ ИМЯ">
+      </label>
+      <label>
+        <input
+            [ngClass]="{'inputError': messageForm.get('userEmail').invalid && errorMessage}"
+            formControlName="userEmail"
+            placeholder="ВАША ЭЛЕКТРОННАЯ ПОЧТА">
+      </label>
+      <label>
+        <textarea
+            [ngClass]="{'inputError': messageForm.get('userQuestion').invalid && errorMessage}"
+            formControlName="userQuestion"
+            placeholder="ВАШ ВОПРОС"></textarea>
+      </label>
       <button class="btn btn-warning button text6">ОТПРАВИТЬ СООБЩЕНИЕ</button>
     </form>
 

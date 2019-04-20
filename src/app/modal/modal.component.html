@@ -8,14 +8,18 @@
   <div class="modal-body">
     <h5 *ngIf="success" class="success">Ваша заявка успешно отправлена!</h5>
     <form [formGroup]="messageForm" class="form" (ngSubmit)="onSubmit()">
-      <input
-        [ngClass]="{'inputError': messageForm.get('userName').invalid && errorMessage}"
-        formControlName="userName"
-        placeholder="  ВАШЕ ИМЯ">
-      <input
-        [ngClass]="{'inputError': messageForm.get('userPhone').invalid && errorMessage}"
-        formControlName="userPhone"
-        placeholder="  ВАШ КОНТАКТНЫЙ ТЕЛЕФОН">
+      <label>
+        <input
+            [ngClass]="{'inputError': messageForm.get('userName').invalid && errorMessage}"
+            formControlName="userName"
+            placeholder="  ВАШЕ ИМЯ">
+      </label>
+      <label>
+        <input
+            [ngClass]="{'inputError': messageForm.get('userPhone').invalid && errorMessage}"
+            formControlName="userPhone"
+            placeholder="  ВАШ КОНТАКТНЫЙ ТЕЛЕФОН">
+      </label>
       <button class="btn btn-primary button text6">{{buttonText}}</button>
     </form>
   </div>

@@ -29,6 +29,7 @@ button {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    text-align: center;
     font-family: 'TTNorms Medium',sans-serif;
     color: rgb(70, 70, 70);
     font-size: 16px;
@@ -77,6 +78,20 @@ button {
       font-family: "TTNorms Regular";
       color: rgb(226, 125, 0);
       text-align: center;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 1200px)  {
+  .content {
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+
+    .cards {
+      width: auto;
     }
   }
 }

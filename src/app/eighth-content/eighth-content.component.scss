@@ -39,6 +39,7 @@ h4 {
     margin-top: 60px;
     display: flex;
     justify-content: center;
+    text-align: center;
     font-family: 'TTNorms Medium',sans-serif;
     color: rgb(70, 70, 70);
     font-size: 32px;
@@ -79,6 +80,7 @@ h4 {
 
       .text3 {
         margin-top: 10px;
+        text-align: center;
       }
 
       .text4 {
@@ -100,7 +102,7 @@ h4 {
 
       .text5 {
         margin-top: 10px;
-
+        text-align: center;
         font-weight: 700;
         font-size: 16px;
       }
@@ -121,6 +123,42 @@ h4 {
         margin-top: 20px;
         color: rgb(255, 255, 255);
         font-size: 16px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px)  {
+
+  .content {
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+
+    .cont {
+      flex-direction: column;
+
+      .consult {
+        margin-right: 0;
+      }
+
+      .form {
+        margin-top: 32px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px)  {
+
+  input, textarea {
+    width: 100%;
+  }
+
+  .content {
+    .cont {
+      .form {
+        width: 90%;
       }
     }
   }
